@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flag {
+    width: 100%;
+}
+
+.stripe {
+    height: calc(100vh / 3);
+    width: 100vw;
+}
+
+
+.saffron {
+    background: #FF9933;
+    animation: colorShift 2s linear infinite;
+}
+
+.white {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.green {
+    background: #138808;
+    animation: colorShift2 2s linear infinite;
+}
+
+@keyframes colorShift {
+    0% { background: #FF9933; }
+    50% { background: white; }
+    100% { background: #FF9933; }
+}
+
+@keyframes colorShift2 {
+    0% { background: #138808; }
+    50% { background: white; }
+    100% { background: #138808; }
+}
+
+.chakra-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chakra {
+    width: 220px;
+    height: 220px;
+    border: 6px solid #000080;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 6s linear infinite;
+}
+
+.spoke {
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background: #000080;
+    left: 50%;
+    top: 0;
+    transform-origin: bottom;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.cta-box {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    width: 260px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px #138808;
+}
+
+.cta-box h2 {
+    color: #138808;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    font-size: 14px;
+    color: #000;
+}
+
+.white img {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    height: 260px;
+    animation: gandhi 10s ease-in-out infinite alternate;
+}
+
+@keyframes gandhi {
+    from { transform: translateX(-200px); }
+    to { transform: translateX(200px); }
+}
+
+@media (max-width: 768px) {
+
+    .chakra {
+        width: 120px;      /* 🔥 EVEN SMALLER ON MOBILE */
+        height: 120px;
+        border-width: 5px;
+    }
+
+    .cta-box {
+        width: 85%;
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 65%;
+    }
+
+    .white img {
+        height: 180px;
+        animation: none;
+    }
+}
