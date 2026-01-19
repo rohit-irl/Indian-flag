@@ -10,29 +10,33 @@
 
 <body>
 
-    <div class="flag">
-        <div class="stripe saffron"></div>
-        <div class="stripe white">
+    <div class="container">
+        <div class="flag">
+            <div class="stripe saffron"></div>
+            <div class="stripe white">
+                <div class="chakra-wrapper">
+                    <div class="chakra">
+                        <script>
+                            for (let i = 0; i < 24; i++) {
+                                document.write(
+                                    `<div class="spoke" style="transform: rotate(${i * 15}deg);"></div>`
+                                );
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="stripe green"></div>
+        </div>
+
+        <div class="right-content">
+            <img src="https://i.pinimg.com/originals/b9/ef/1b/b9ef1b5502fa92533037a3b67b4fc4e1.jpg" alt="User">
             <div class="cta-box">
                 <h2>सत्यमेव जयते</h2>
                 <p>Truth Alone Triumphs</p>
             </div>
-            <div class="chakra-wrapper">
-                <div class="chakra">
-                    <script>
-                        for (let i = 0; i < 24; i++) {
-                            document.write(
-                                `<div class="spoke" style="transform: rotate(${i * 15}deg);"></div>`
-                            );
-                        }
-                    </script>
-                </div>
-            </div>
-            <img src="pic.jpg" alt="User">
         </div>
-        <div class="stripe green"></div>
     </div>
 
 </body>
-
 </html>

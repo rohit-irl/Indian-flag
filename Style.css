@@ -4,13 +4,23 @@
     box-sizing: border-box;
 }
 
-.flag {
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
     width: 100%;
+    height: 100vh;
+}
+
+.flag {
+    width: 75%;
 }
 
 .stripe {
     height: calc(100vh / 3);
-    width: 100vw;
+    width: 100%;
 }
 
 .saffron {
@@ -72,60 +82,59 @@
     to { transform: rotate(360deg); }
 }
 
+.right-content {
+    width: 25%;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.right-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 150px;
+    border: 1px solid gray;
+}
+
 .cta-box {
     position: absolute;
-    top: 50%;
-    right: 8%;
-    transform: translateY(-50%);
-    width: 260px;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 0 15px #138808;
 }
-
 .cta-box h2 {
-    color: #138808;
     margin-bottom: 10px;
-}
-
-.cta-box p {
-    font-size: 14px;
-    color: #000;
-}
-
-.white img {
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    height: 260px;
-    animation: gandhi 10s ease-in-out infinite alternate;
-}
-
-@keyframes gandhi {
-    from { transform: translateX(-200px); }
-    to { transform: translateX(200px); }
+    color: #138808;
 }
 
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .flag, .right-content {
+        width: 100%;
+        height: 50%;
+    }
 
     .chakra {
-        width: 120px;      /* 🔥 EVEN SMALLER ON MOBILE */
+        width: 120px;
         height: 120px;
         border-width: 5px;
     }
 
-    .cta-box {
-        width: 85%;
-        right: auto;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 65%;
-    }
-
-    .white img {
-        height: 180px;
-        animation: none;
+    .right-content img {
+        height: auto;
     }
 }
